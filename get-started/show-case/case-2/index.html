@@ -205,7 +205,18 @@
 
 </div>
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
-	<nav id="TableOfContents"></nav>
+	<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#step-1-download-the-source-code">Step 1 Download the Source Code</a></li>
+        <li><a href="#step-2-installation">Step 2 Installation</a></li>
+        <li><a href="#step-3-run-this-showcase">Step 3 Run this Showcase</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 </div>
 </div>
                 <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
@@ -213,6 +224,25 @@
 
 <h1>Case 2</h1>
 
+<h1 id="case-2---wear-detection">Case 2 - Wear Detection</h1>
+<h3 id="requirements">Requirements</h3>
+<p>Before installing this showcase to the device, please install ADLINK EVASDK and
+set the EVA environment as necessary.</p>
+<h3 id="step-1-download-the-source-code">Step 1 Download the Source Code</h3>
+<p>Use the following command to clone the source code from GitHub:</p>
+<p>$ git clone <a href="https://github.com/IST-EVA-Support/EVA_Show-Case.git">https://github.com/IST-EVA-Support/EVA_Show-Case.git</a></p>
+<p>$ cd EVA_Show-Case</p>
+<p>$ git checkout JNX</p>
+<h3 id="step-2-installation">Step 2 Installation</h3>
+<p>Add execution permissions</p>
+<p>$ find . -type f -iname *.sh -exec chmod +x {} \;</p>
+<p>Run install.sh with root privileges</p>
+<p>$ cd src/demo/weardetection</p>
+<p>$ ./install.sh</p>
+<h3 id="step-3-run-this-showcase">Step 3 Run this Showcase</h3>
+<p>When an alert triggered, this showcase will send an email alert.</p>
+<p>You can edit &ldquo;run.sh&rdquo; and change &ldquo;<a href="mailto:xxx@xxx.com">xxx@xxx.com</a>&rdquo; to your email.</p>
+<p>$ ./run.sh</p>
 
 
     
