@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://paul-adlink.github.io/news/</loc>
+    <lastmod>2021-02-23T16:03:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/introduction/</loc>
+    <lastmod>2021-02-23T16:04:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/</loc>
+    <lastmod>2021-02-23T16:04:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/download/</loc>
+    <lastmod>2021-02-23T17:33:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/download/linux/</loc>
+    <lastmod>2021-02-23T17:38:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/download/windows/</loc>
+    <lastmod>2021-02-23T17:39:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/download/container/</loc>
+    <lastmod>2021-02-23T17:39:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/user-manual/</loc>
+    <lastmod>2021-02-23T16:05:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/user-manual/plugin/</loc>
+    <lastmod>2021-02-24T15:08:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/user-manual/ide/</loc>
+    <lastmod>2021-02-24T15:09:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/quick-start/</loc>
+    <lastmod>2021-02-23T16:05:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/function-samples/</loc>
+    <lastmod>2021-02-23T16:06:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/function-samples/plugin/</loc>
+    <lastmod>2021-02-24T15:26:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/function-samples/application/</loc>
+    <lastmod>2021-02-24T15:26:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/model-zoo/</loc>
+    <lastmod>2021-02-23T16:06:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/model-zoo/openvino/</loc>
+    <lastmod>2021-02-23T17:00:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/model-zoo/tensorrt/</loc>
+    <lastmod>2021-02-23T17:01:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/show-case/</loc>
+    <lastmod>2021-02-23T16:06:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/show-case/case-1/</loc>
+    <lastmod>2021-02-24T15:47:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/show-case/case-2/</loc>
+    <lastmod>2021-02-24T15:47:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/get-started/show-case/case-3/</loc>
+    <lastmod>2021-02-24T15:47:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/successful-story/</loc>
+    <lastmod>2021-02-23T16:06:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/helper/</loc>
+    <lastmod>2021-02-23T16:03:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/helper/faq/</loc>
+    <lastmod>2021-02-23T16:07:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/helper/contact/</loc>
+    <lastmod>2021-02-23T16:07:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/licensing/</loc>
+    <lastmod>2021-03-17T13:15:38+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/</loc>
+    <lastmod>2021-02-23T15:59:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://paul-adlink.github.io/tags/</loc>
+  </url>
+  
+</urlset>
