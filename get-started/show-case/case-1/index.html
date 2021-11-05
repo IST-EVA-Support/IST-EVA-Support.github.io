@@ -207,14 +207,15 @@
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
 	<nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#requirements">Requirements</a></li>
+    <li><a href="#getting-start">Getting start</a>
       <ul>
-        <li><a href="#requirements">Requirements</a></li>
         <li><a href="#step-1-download-the-source-code">Step 1 Download the Source Code</a></li>
         <li><a href="#step-2-installation">Step 2 Installation</a></li>
         <li><a href="#step-3-run-this-showcase">Step 3 Run this Showcase</a></li>
       </ul>
     </li>
+    <li><a href="#define-restricted-area">Define restricted area</a></li>
   </ul>
 </nav>
 </div>
@@ -225,23 +226,45 @@
 <h1>Case 1</h1>
 
 <h1 id="case-1---geofencing">Case 1 - Geofencing</h1>
-<h3 id="requirements">Requirements</h3>
+<ul>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#getting-start">Getting start</a></li>
+<li><a href="#define-restricted-area">Define restricted area</a></li>
+</ul>
+<h2 id="requirements">Requirements</h2>
 <p>Before installing this showcase to the device, please install ADLINK EVASDK and
 set the EVA environment as necessary.</p>
+<h2 id="getting-start">Getting start</h2>
 <h3 id="step-1-download-the-source-code">Step 1 Download the Source Code</h3>
 <p>Use the following command to clone the source code from GitHub:</p>
 <p>$ git clone <a href="https://github.com/IST-EVA-Support/EVA_Show-Case.git">https://github.com/IST-EVA-Support/EVA_Show-Case.git</a></p>
 <h3 id="step-2-installation">Step 2 Installation</h3>
 <p>Add execution permissions</p>
-<p>$ cd EVA_Show-Case</p>
-<p>$ find . -type f -iname *.sh -exec chmod +x {} \;</p>
+<p>$ cd EVA_Show-Case
+$ find . -type f -iname *.sh -exec chmod +x {} \;</p>
 <p>Run install.sh with root privileges</p>
-<p>$ cd src/demo/geofence</p>
-<p>$ ./install.sh</p>
+<p>$ cd src/demo/geofence
+$ ./install.sh</p>
 <h3 id="step-3-run-this-showcase">Step 3 Run this Showcase</h3>
 <p>When an alert triggered, this showcase will send an email alert.</p>
 <p>You can edit &ldquo;run.sh&rdquo; and change &ldquo;<a href="mailto:xxx@xxx.com">xxx@xxx.com</a>&rdquo; to your email.</p>
 <p>$ ./run.sh</p>
+<h2 id="define-restricted-area">Define restricted area</h2>
+<p><img src="/Get%20Started/Show%20Case/Case%201/images/image-showcase1.png" alt="restricted area"></p>
+<p>The red area denotes the restrict area which defined in alert-def-area-geo.txt depends on the video.</p>
+<ul>
+<li>you can check alert-def-area-geo.txt in /src/plugins/geofence folder.</li>
+</ul>
+<p>This file provides the defined area with normalized clockwise coordinates x and y each row.</p>
+<ul>
+<li>
+<p>The normalized coordinate value is a floating point number from 0 to 1. (0,0) represents the first pixel of the picture, so the position of the center pixel of the picture is (0.5, 0.5).</p>
+</li>
+<li>
+<p>If you add an additional coordinate, the red area will become a pentagon.</p>
+</li>
+</ul>
+<p>Once you modified alert-def-area-geo.txt , required to rebuild it simply direct to the path /src/plugins/geofence and run geofence-build.sh for ubuntu system or geofence-build.bat for windows 10.</p>
 
 
     
