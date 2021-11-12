@@ -205,7 +205,18 @@
 
 </div>
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
-	<nav id="TableOfContents"></nav>
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#showcase-requirements">Showcase Requirements</a></li>
+    <li><a href="#showcase-3-installation">Showcase 3 Installation</a>
+      <ul>
+        <li><a href="#for-this-showcase">For this showcase:</a></li>
+      </ul>
+    </li>
+    <li><a href="#training-materials">Training Materials</a></li>
+    <li><a href="#run-this-showcase-through-eva-idefor-evasdk-352-or-later">Run This Showcase Through EVA IDE(For EVASDK 3.5.2 or later)</a></li>
+  </ul>
+</nav>
 </div>
 </div>
                 <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
@@ -213,6 +224,56 @@
 
 <h1>Case 3</h1>
 
+<h1 id="showcase-3-cookie-inspection">Showcase 3: Cookie inspection</h1>
+<h2 id="showcase-requirements">Showcase Requirements</h2>
+<p>Before installing this showcase to the device, please install ADLINK EVASDK and set the EVA environment as necessary.</p>
+<h2 id="showcase-3-installation">Showcase 3 Installation</h2>
+<p>The path to the respective demo folder includes install.sh and run.sh for each showcase.</p>
+<p>Install.sh will perform the following steps:</p>
+<ol>
+<li>Download the demo video.</li>
+<li>Download the inference ONNX model file and label file.</li>
+<li>Download the required showcase demo videos and plug-in setup files.</li>
+</ol>
+<h3 id="for-this-showcase">For this showcase:</h3>
+<p>Use the path:</p>
+<pre tabindex="0"><code>&gt; cd src/demo/cookie-inspection
+</code></pre><p>Run install.sh with root privileges:</p>
+<pre tabindex="0"><code>&gt; ./install.sh
+</code></pre><p>This is required to modify the path to the OpenCV library. If you have installed EVA on a non-ADLINK device, please check the requirements in our EVA portal.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>After installation, execute run.sh for the pipeline command:</p>
+<pre tabindex="0"><code>&gt; ./run.sh
+</code></pre><p>Or you can open EVA_IDE and load pygraph then execute, please see the section, <a href="#Run-This-Showcase-Through-EVA-IDE">Run This Showcase Through EVA IDE</a>.</p>
+<p>Then you will see the pop-up display window of this showcase as in the example below.</p>
+<p><img src="/images/Showcase/image-showcase3.png" alt="image-showcase3"></p>
+<p>*Modified installation details can be found at the EVA Portal: &lt; Under Construction &gt;</p>
+<h2 id="training-materials">Training Materials</h2>
+<p>The training materials can be downloaded with the following links.</p>
+<p>Training images: <a href="http://ftp.adlinktech.com/image/EVA/EVA_Show-Case/training/showcase3/cookie-training-images.zip">http://ftp.adlinktech.com/image/EVA/EVA_Show-Case/training/showcase3/cookie-training-images.zip</a></p>
+<p>Training notation for ONNX: <a href="http://ftp.adlinktech.com/image/EVA/EVA_Show-Case/training/showcase3/cookie-training-notation.zip">http://ftp.adlinktech.com/image/EVA/EVA_Show-Case/training/showcase3/cookie-training-notation.zip</a></p>
+<p>Training architecture site list below:</p>
+<p>Azure Custom Vision:</p>
+<p><a href="https://www.customvision.ai/">https://www.customvision.ai/</a></p>
+<p>Sample scripts for exported models from Custom Vision</p>
+<p><a href="https://github.com/Azure-Samples/customvision-export-samples">https://github.com/Azure-Samples/customvision-export-samples</a></p>
+<p>Sample script for CustomVision&rsquo;s ONNX Object Detection model</p>
+<p><a href="https://github.com/Azure-Samples/customvision-export-samples/tree/main/samples/python/onnx/object_detection">https://github.com/Azure-Samples/customvision-export-samples/tree/main/samples/python/onnx/object_detection</a></p>
+<p>*Sign up the Azure Service can be found at this page 
+<a href="https://azurelessons.com/create-azure-free-account/#Create_Azure_Free_Account">https://azurelessons.com/create-azure-free-account/#Create_Azure_Free_Account</a></p>
+<p>*Creat new project in Custom Vision can be found at the EVA Portal: &lt; Under Construction &gt;</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="run-this-showcase-through-eva-idefor-evasdk-352-or-later">Run This Showcase Through EVA IDE(For EVASDK 3.5.2 or later)</h2>
+<p>In this showcase, you can run the pipeline by execute <!-- raw HTML omitted -->run.sh<!-- raw HTML omitted --> but also EVA IDE. Open EVA IDE and make sure your current path is in src/demo/cookie-inspection as root:</p>
+<pre tabindex="0"><code>&gt; EVA_ROOT/bin/EVA_IDE
+</code></pre><p>EVA_ROOT is the path where the EVA is installed, the default installed path is /opt/adlink/eva/. So directly call EVA_IDE:</p>
+<pre tabindex="0"><code>&gt; /opt/adlink/eva/bin/EVA_IDE
+</code></pre><p>And you will see the IDE show up as below:</p>
+<p><img src="/images/Showcase/EVAIDE.png" alt="EVAIDE"></p>
+<p>Then select the pygraph you want to run, here for example select showcase3-onnx.pygraph in this showcase folder through File-&gt;Load. Then you can see this showcase pipeline:</p>
+<p><img src="/images/Showcase/showcase3-file-load.png" alt="showcase3-file-load"></p>
+<p><img src="/images/Showcase/showcase3-pipeline.png" alt="showcase3-pipeline"></p>
+<p>Then press the play button <img src="/images/Showcase/play-button.png" alt="play-button"> and you will see the scenario video start to play.</p>
 
 
     

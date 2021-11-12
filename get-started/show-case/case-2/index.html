@@ -207,14 +207,14 @@
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
 	<nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#showcase-requirements">Showcase Requirements</a></li>
+    <li><a href="#showcase-2-installation">Showcase 2 Installation</a>
       <ul>
-        <li><a href="#requirements">Requirements</a></li>
-        <li><a href="#step-1-download-the-source-code">Step 1 Download the Source Code</a></li>
-        <li><a href="#step-2-installation">Step 2 Installation</a></li>
-        <li><a href="#step-3-run-this-showcase">Step 3 Run this Showcase</a></li>
+        <li><a href="#for-this-showcase">For this showcase:</a></li>
       </ul>
     </li>
+    <li><a href="#training-materials">Training Materials</a></li>
+    <li><a href="#run-this-showcase-through-eva-idefor-evasdk-352-or-later">Run This Showcase Through EVA IDE(For EVASDK 3.5.2 or later)</a></li>
   </ul>
 </nav>
 </div>
@@ -224,24 +224,75 @@
 
 <h1>Case 2</h1>
 
-<h1 id="case-2---wear-detection">Case 2 - Wear Detection</h1>
-<h3 id="requirements">Requirements</h3>
-<p>Before installing this showcase to the device, please install ADLINK EVASDK and
-set the EVA environment as necessary.</p>
-<h3 id="step-1-download-the-source-code">Step 1 Download the Source Code</h3>
-<p>Use the following command to clone the source code from GitHub:</p>
-<p>$ git clone <a href="https://github.com/IST-EVA-Support/EVA_Show-Case.git">https://github.com/IST-EVA-Support/EVA_Show-Case.git</a></p>
-<h3 id="step-2-installation">Step 2 Installation</h3>
-<p>Add execution permissions</p>
-<p>$ cd EVA_Show-Case</p>
-<p>$ find . -type f -iname *.sh -exec chmod +x {} \;</p>
-<p>Run install.sh with root privileges</p>
-<p>$ cd src/demo/weardetection</p>
-<p>$ ./install.sh</p>
-<h3 id="step-3-run-this-showcase">Step 3 Run this Showcase</h3>
-<p>When an alert triggered, this showcase will send an email alert.</p>
-<p>You can edit &ldquo;run.sh&rdquo; and change &ldquo;<a href="mailto:xxx@xxx.com">xxx@xxx.com</a>&rdquo; to your email.</p>
-<p>$ ./run.sh</p>
+<h1 id="showcase-2-wear-detection">Showcase 2: Wear Detection</h1>
+<h2 id="showcase-requirements">Showcase Requirements</h2>
+<p>Before installing this showcase case to the device, please install ADLINK EVASDK and set the EVA environment as necessary.</p>
+<h2 id="showcase-2-installation">Showcase 2 Installation</h2>
+<p>The path to the respective demo folder includes install.sh and run.sh for each showcase.</p>
+<p>Install.sh will perform the following steps:</p>
+<ol>
+<li>Build the required plug-ins for each showcase and install them into ADLINK EVASDK.</li>
+<li>Download the inference intermediate model file and convert it to TensorRT format on the local device.</li>
+<li>Download the required showcase demo videos and plug-in setup files.</li>
+</ol>
+<h3 id="for-this-showcase">For this showcase:</h3>
+<p>Use the path:</p>
+<pre tabindex="0"><code>&gt; cd src/demo/weardetection
+</code></pre><p>For Windows,</p>
+<pre tabindex="0"><code>&gt; cd src\demo\geofence\windows
+</code></pre><p>Run install.sh with root privileges:</p>
+<pre tabindex="0"><code>&gt; ./install.sh
+</code></pre><p>For Windows:</p>
+<pre tabindex="0"><code>&gt; install-win.bat
+</code></pre><p>This is required to modify the path to the OpenCV library. If you have installed EVA on a non-ADLINK device, please check the requirements in our EVA portal.</p>
+<p>The mobilenetssdv2 is the default installed, if want to install yolov3, use the argument below:</p>
+<pre tabindex="0"><code>&gt; ./install.sh yolov3
+</code></pre><p>For Windows:</p>
+<pre tabindex="0"><code>&gt; install-win.bat yolov3
+</code></pre><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>After installation, execute run.sh for the pipeline command:</p>
+<pre tabindex="0"><code>&gt; ./run.sh
+</code></pre><p>For Windows:</p>
+<pre tabindex="0"><code>&gt; run-win.bat
+</code></pre><p>The mobilenetssdv2 is the default run, if yolov3 is installed, use the argument below:</p>
+<pre tabindex="0"><code>&gt; ./run.sh yolov3
+</code></pre><p>For Windows:</p>
+<pre tabindex="0"><code>&gt; run-win.bat yolov3
+</code></pre><p>Or you can open EVA_IDE and load pygraph then execute, please see the section, <a href="#Run-This-Showcase-Through-EVA-IDE">Run This Showcase Through EVA IDE</a>.</p>
+<p>Then you will see the pop-up display window of this showcase as in the example below.</p>
+<p><img src="/images/Showcase/image-showcase2.png" alt="image-showcase2"></p>
+<p>The blue area denotes the restrict area which defined in alert-def-area.txt depends on the video. This file provides the defined area with normalized clockwise coordinates x and y each row. Once you modified this weardetection plugin source code, required to rebuild it simply direct to the path <a href="/src/plugins/weardetection">/src/plugins/weardetection</a> and run weardetection-build.sh for ubuntu system or weardetection-build.bat for windows 10. (windows version of this showcase will provide in later version) The email alert plugin were implemented in python. Once modified the email alert plugin, direct to <a href="/src/plugins/alert/email">/src/plugins/alert/email</a> and run email-build.sh for ubuntu or email-build.bat for windows 10. (windows version of this showcase will provide in later version). The same rebuild procedure for other alert plugins. More detail setting could be found in EVA Portal.</p>
+<p>*Modified installation details can be found at the EVA Portal: &lt; Under Construction &gt;</p>
+<h2 id="training-materials">Training Materials</h2>
+<p>The training materials can be downloaded with the following links.</p>
+<p>Training images: <a href="http://ftp.adlinktech.com/image/EVA/EVA_Show-Case/training/showcase1-2/geo-fencing-training-images.zip">http://ftp.adlinktech.com/image/EVA/EVA_Show-Case/training/showcase1-2/geo-fencing-training-images.zip</a></p>
+<p>Training notation for mobilenetSSDv2: <a href="http://ftp.adlinktech.com/image/EVA/EVA_Show-Case/training/showcase1-2/geo-fencing-mobilenetSSDv2.zip">http://ftp.adlinktech.com/image/EVA/EVA_Show-Case/training/showcase1-2/geo-fencing-mobilenetSSDv2.zip</a></p>
+<p>Training notation for yolov3: <a href="http://ftp.adlinktech.com/image/EVA/EVA_Show-Case/training/showcase1-2/geo-fencing-yolov3.zip">http://ftp.adlinktech.com/image/EVA/EVA_Show-Case/training/showcase1-2/geo-fencing-yolov3.zip</a></p>
+<p>Training architecture sites listed below:</p>
+<p>mobilenetSSDv2:</p>
+<p><a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1.md">https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1.md</a></p>
+<p><a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md,">https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md,</a> ssd_mobilenet_v2_coco</p>
+<p>yolov3:</p>
+<p><a href="https://github.com/AlexeyAB/darknet/tree/Yolo_v3">https://github.com/AlexeyAB/darknet/tree/Yolo_v3</a></p>
+<p>Note: Showcases 1 and 2 use the same training materials.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="run-this-showcase-through-eva-idefor-evasdk-352-or-later">Run This Showcase Through EVA IDE(For EVASDK 3.5.2 or later)</h2>
+<p>In this showcase, you can run the pipeline by execute <!-- raw HTML omitted -->run.sh<!-- raw HTML omitted --> but also EVA IDE. Open EVA IDE and make sure your current path is in src/demo/weardetection as root:</p>
+<pre tabindex="0"><code>&gt; EVA_ROOT/bin/EVA_IDE
+</code></pre><p>EVA_ROOT is the path where the EVA is installed, the default installed path is /opt/adlink/eva/. So directly call EVA_IDE:</p>
+<pre tabindex="0"><code>&gt; /opt/adlink/eva/bin/EVA_IDE
+</code></pre><p>And you will see the IDE show up as below:</p>
+<p><img src="/images/Showcase/EVAIDE.png" alt="EVAIDE"></p>
+<p>Then select the pygraph you want to run, here for example select showcase2-mobilenetssdv2.pygraph in this showcase folder through File-&gt;Load. Then you can see this showcase pipeline:</p>
+<p><img src="/images/Showcase/showcase2-file-load.png" alt="showcase2-file-load"></p>
+<p><img src="/images/Showcase/showcase2-pipeline.png" alt="showcase1-pipeline"></p>
+<p>The settings are default set relevant to this scenario<!-- raw HTML omitted -->&lt;Note 1&gt;<!-- raw HTML omitted --> and one alert require to be set. Click on the email_alert node in the pipeline and the property window will show the node properties detail at left side. See the figure below:</p>
+<p><img src="/images/Showcase/emailalert-node.png" alt="emailalert-node"> <img src="/images/Showcase/emailalert-node-property-showcase2.png" alt="emailalert-node-property"></p>
+<p>Provide an email address you want to receive from the alert for this show case in &ldquo;receiver-address&rdquo;. Then press the play button <img src="/images/Showcase/play-button.png" alt="play-button"> and you will see the scenario video start to play.</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>&lt;Note 1&gt; If your IDE can not show/add the plugin node &ldquo;h264parse&rdquo; or &ldquo;weardetection&rdquo; after loading the pygraph file, manually add it into the while list. The file element_list.txt will be generated after running IDE once.</p>
+<p>For Linux, add &ldquo;+h264parse&rdquo; or &ldquo;+weardetection&rdquo; in file : /home/USER_ACCOUNT/adlink/eva/IDE/config/element_list.txt.</p>
+<p>For Windows 10, add &ldquo;+h264parse&rdquo; or &ldquo;+weardetection&rdquo; in file : C:\ADLINK\eva\IDE\config\element_list.txt</p>
 
 
     

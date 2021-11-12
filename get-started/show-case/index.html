@@ -205,7 +205,11 @@
 
 </div>
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
-	<nav id="TableOfContents"></nav>
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#clone-the-source-code">Clone the Source Code</a></li>
+  </ul>
+</nav>
 </div>
 </div>
                 <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
@@ -213,6 +217,58 @@
 
 <h1>Show Case</h1>
 
+<h1 id="welcome-to-adlink-eva-showcase">Welcome to ADLINK EVA Showcase!</h1>
+<p>In this git repository, you can download the source code of the plug-ins we designed for the showcases. Each showcase demonstrates the pipeline elements you will need. EVASDK can help you to quickly set up and build the applications for your specific implementation.</p>
+<h2 id="clone-the-source-code">Clone the Source Code</h2>
+<p>Use the following command to clone the source code from GitHub:</p>
+<pre tabindex="0"><code>&gt; git clone https://github.com/IST-EVA-Support/EVA_Show-Case.git
+&gt; cd EVA_Show-Case
+&gt; find . -type f -iname *.sh -exec chmod +x {} \;
+</code></pre><p>Showcases currently available:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Description</th>
+<th>Path to demo</th>
+<th>Categories</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Showcase 1</td>
+<td>In this showcase you will see how EVA is used to prepare the pipeline for detecting people entering a specific area. Factories commonly have restricted areas to keep workers safe from moving automation or robots. In this showcase you will see how a corridor is designated as a restricted area to prevent people from entering it. If someone enters the restricted area, the region will turn red if the display is set to true, and an alert event will be recorded as metadata for a downstream element to activate.</td>
+<td><a href="src/demo/geofence">src/demo/geofence</a></td>
+<td>Geofencing</td>
+</tr>
+<tr>
+<td>Showcase 2</td>
+<td>In this showcase you will see how EVA is used to prepare the pipeline for detecting people entering a specific area and checking if the person is wearing a clean room suit. For certain manufacturing processes, a clean room suit is required when entering an environmentally controlled space. In this showcase, geofencing is also used to detect when someone crosses the entrance. The downstream element for clean room suit detection will then be activated to detect if the person is wearing the appropriate clothes before entering the FAB.</td>
+<td><a href="src/demo/weardetection">src/demo/weardetection</a></td>
+<td>Geofencing/Wear Detection</td>
+</tr>
+<tr>
+<td>Showcase 3</td>
+<td>In this showcase you will see how EVA is used to prepare the pipeline for detecting abnormal alignment of cookies on the production line. We can use Custom Vision to test the recognition effect of AI. In this demonstration, Custom Vision can be exported into a universal ONNX model, and the EVA can be used to quickly verify the video or the actual shooting results.</td>
+<td><a href="src/demo/cookie-inspection">src/demo/cookie-inspection</a></td>
+<td>Product Inspection</td>
+</tr>
+<tr>
+<td>Showcase 4</td>
+<td>In this showcase you will see how EVA is used to prepare the pipeline for monitoring the parts preparation and its order in the parts container. This monitoring is one of the assemble standard operation to prevent missing to assemble parts like screws in the next assemble steps. In additional to this purpose, the preparation time is also the critical fact for the analyst for formulating the optimal assembly standard. Collecting this information extremely help to reflect the true preparation time instead of coming from few simulating samples.</td>
+<td><a href="src/demo/part-preparation">src/demo/part-preparation</a></td>
+<td>Product Inspection/Preparation</td>
+</tr>
+<tr>
+<td>Showcase 5</td>
+<td>In this showcase you will see how EVA is used to prepare the pipeline for monitoring the product assembly based on the standard operation procedure. Each parts is required assembled orderly in time. Otherwise the whole procedure will exceed the standard assemble time designed. Each part will calculate its own consuming time and then summed for the analyst to dynamically adjust or designed the whole product assembly standard operation procedure. Ultimately, the convenient combination with showcase 4 for illustrating the two SOP algorithm plug and play in EVA.</td>
+<td><a href="src/demo/part-assembly">src/demo/part-assembly</a></td>
+<td>Product Inspection/Assembly</td>
+</tr>
+</tbody>
+</table>
+<p>Each showcase describes how to install and run the demo. Simply enter the path to each demo showcase you are interested in and run it.</p>
+<p>Visit our EVA portal for more information: &lt; Under Construction &gt;</p>
 
 
     
